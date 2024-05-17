@@ -7,10 +7,7 @@ import com.example.convidados.repository.GuestRepository
 
 class GuestFormViewModel(application: Application) : AndroidViewModel(application) {
     private val repository = GuestRepository.getInstance(application)
-    fun abc() {
-    }
-
-    fun save(guestModel: GuestModel) {
-
+    fun insert(guestModel: GuestModel): Boolean {
+           return repository.insert(guestModel)
     }
 }
